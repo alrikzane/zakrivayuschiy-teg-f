@@ -12,3 +12,86 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+/* default state*/
+
+.like-icon .core {
+  fill: var(--theme-background-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon .main-heart {
+  fill: var(--theme-background-color);
+  transition: fill 0.3s linear;
+}
+
+/* heart fill on hover */
+
+.like-icon:hover .core {
+  fill: var(--contour-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .main-heart {
+  fill: var(--contour-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* red heart on-click*/
+
+.like-icon:active .core {
+  fill: var(--sparks-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .main-heart {
+  fill: var(--sparks-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* finish animation off-click */ 
+
+.like-icon.is-liked .core {
+  fill: var(--sparks-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-heart {
+  fill: var(--sparks-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--sparks-color);
+  transition: fill 0.3s linear 0.06s;
+}
+
+/* spark explosion*/
+
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s ease-in 0.1s 1 alternate;
+}
+
+@keyframes sparks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* heartbeat */
+
+.like-icon.is-liked .heart {
+  animation: heart 0.3s ease-in 0.1s 1 alternate;
+}
+
+@keyframes heart {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.5;
+  }
+}

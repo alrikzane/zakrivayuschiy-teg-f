@@ -19,4 +19,12 @@
   --border-color:#00CC14;
   --gap: 25px;
   --main-font: Inter, sans-serif;
+  
+  /* heart */
+  --core-color: none;
+  --contour-color: var(--theme-text-color);
+  --sparks-color: red;
+  --main-heart-color: none;
+
+
 }
