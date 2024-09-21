@@ -37,6 +37,10 @@ input {
   font-size: inherit;
 }
 
+button {
+  background-color: transparent;
+}
+
 ul,
 ol {
   list-style: none;
