@@ -78,8 +78,8 @@
                     0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--sparks-color)"/>
                   </svg>                
                 </button>              
-                <button class="card__like-button">
-                  <span class="button__text">like</span>
+                <button class="card__like-button button">
+                  <span class="button__text">Like</span>
                 </button>
               </div>
               
@@ -87,7 +87,19 @@
           </article>
         </li>
       </ul>
+      <button type="button" onclick="window.modal.showModal();" aria-controls="modal" class="button save-button">
+        <svg class="save-button-icon" xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 39 39" >
+        <use href="/svg/floppy.svg#save-icon"></use>
+      </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
     </main>
+    
+    
+
+      
+    
     <script src="./scripts/like.js"></script>
   </body>
 </html>

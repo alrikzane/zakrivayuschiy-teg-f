@@ -19,6 +19,8 @@
   --border-color:#00CC14;
   --gap: 25px;
   --main-font: Inter, sans-serif;
+  --watermark-shadow: #000000;
+  --button-text-color: #00CC14;
   
   /* heart */
   --core-color: none;

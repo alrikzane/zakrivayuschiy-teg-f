@@ -61,17 +61,38 @@
 
 .theme-menu__list {
   margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .theme-menu__button {
   font-family: Press-Start-2P;
   font-size: 14px;
   font-weight: 400;
+  border: none;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.theme-menu__button:disabled, .theme-menu__button:hover {
+  opacity: 0.6;  
+}
+
+.theme-menu__button:disabled {
+  pointer-events: none;
+}
+
+.theme-menu__button:focus {
+  outline: none;
 }
 
 .main {
   max-inline-size: 700px;
-  margin: auto;
+  margin: auto;  
+}
+
+.sprint-deck {
   background-color: var(--theme-background-color);
 }
 
@@ -113,6 +134,20 @@ img {
   color: var(--theme-text-color);
   opacity: 50%;
   font-family: Press-Start-2P, sans-serif;
+  text-shadow: 
+    -1px -1px 1px var(--watermark-shadow), 
+    1px 1px 1px var(--watermark-shadow),
+    -1px 1px 1px var(--watermark-shadow), 
+    1px -1px 1px var(--watermark-shadow);
+  mix-blend-mode: hard-light;
+}
+
+@supports((text-stroke: 1px var(--watermark-shadow)) or (-webkit-text-stroke: 1px var(--watermark-shadow))) {
+  .img-wrapper::after {
+      -webkit-text-stroke: 1px var(--watermark-shadow);
+      text-stroke: 1px var(--watermark-shadow);
+      text-shadow: none;
+  }
 }
 
 .card-footer {
@@ -157,10 +192,45 @@ img {
   transition: border 0.3s ease;
 }
 
+.button {
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--theme-text-color);
+}
+
 .button__text {
-  text-transform: capitalize;
   font-family: Press-Start-2P;
   font-size: 14px;
   font-weight: 400;
   line-height: 0.9;
+}
+
+.button__text, .save-button-icon {
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
+}
+
+.save-button {
+  margin: 50px auto 100px;
+  background-color: var(--theme-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-inline-size: 375px;
+  min-block-size: 55px;  
+  flex-wrap: nowrap;
+  border: 2px solid var(--border-color);
+}
+
+.save-button-icon {
+  inline-size: 21px;
+  block-size: 21px;
 }

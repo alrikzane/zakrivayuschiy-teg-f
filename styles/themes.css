@@ -5,11 +5,32 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-.html.theme-dark {
+:root.theme-dark {
+  /* backgrounds */
+  --theme-background-color:#000;  
+  --background-gradient-color:#000;
+  --background-gradient-cover:#007F0C;
+  --background-gradient-smooth-start:#007F0C;
+  --background-gradient-smooth-end:#004306;
+  --page-background-gradient: 
+  repeating-linear-gradient(to left, transparent 0 2px, 
+    var(--background-gradient-color) 2px 4px), 
+  repeating-linear-gradient(to bottom, transparent 0 2px,
+    var(--background-gradient-color) 2px 4px),
+  linear-gradient(to bottom, var(--background-gradient-smooth-start) 0.01%, var(--background-gradient-smooth-end));
+  
+  
+  --theme-text-color: #00CC14;
+  --border-color:#00CC14;
+  --gap: 25px;
+  --main-font: Inter, sans-serif;
+  --watermark-shadow: #000000;
+  --button-text-color: #00CC14;
   
 }
 
-.theme-light {
+:root.theme-light {
+  /* backgrounds */
   --theme-background-color:#FFFFFF;  
   --background-gradient-color:#FFFFFF;
   --background-gradient-cover:#d3d3d3;
@@ -18,24 +39,22 @@
 
   --theme-text-color: #000000;
   --border-color:#000000;
+  --watermark-shadow: #FFFFFF;
+  --button-text-color: #fff;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     /* backgrounds */
-  --theme-background-color:##FFFFFF;  
-  --background-gradient-color:##FFFFFF;
+  --theme-background-color:#FFFFFF;  
+  --background-gradient-color:#FFFFFF;
   --background-gradient-cover:#d3d3d3;
   --background-gradient-smooth-start:#e7e7e7;
-  --background-gradient-smooth-end:#1a1a1a;
+  --background-gradient-smooth-end:#636262;
 
   --theme-text-color: #000000;
   --border-color:#000000;
-/*   --page-background-gradient: 
-  repeating-linear-gradient(to left, transparent 0 2px, 
-    var(--background-gradient-color) 2px 4px), 
-  repeating-linear-gradient(to bottom, transparent 0 2px,
-    var(--background-gradient-color) 2px 4px),
-  linear-gradient(to bottom, var(--background-gradient-smooth-start) 0.01%, var(--background-gradient-smooth-end)); */
+  --watermark-shadow: #FFFFFF;
+  --button-text-color: #000;
   }
 }
