@@ -43,10 +43,10 @@
   justify-self: center;
   display: flex;
   flex-direction: column;
+  font-family: var(--decorative-font), sans-serif;
 }
 
 .decorative-tag{
-  font-family: var(--decorative-font), sans-serif;
   font-size: clamp(3.063rem, 1.909rem + 4.923vi, 4.063rem);
   font-weight: var(--decorative-font-weight);
   line-height: 65px;
@@ -55,8 +55,7 @@
 
 .main-title-header {
   align-self: center;
-  text-transform: uppercase;
-  font-family: var(--decorative-font), sans-serif;
+  text-transform: uppercase;  
   font-size: clamp(0.875rem, 0.226rem + 2.769vi, 1.438rem);
   font-weight: var(--decorative-font-weight);
   margin-top: 20px;

@@ -84,10 +84,11 @@
 /* heartbeat */
 
 .like-icon.is-liked .heart {
-  animation: heart 0.3s ease-in 0.1s 1 alternate;
+  animation: heart-expand 0.3s ease-in 0.1s 1 alternate;
+  transform-origin: center;
 }
 
-@keyframes heart {
+@keyframes heart-expand {
   from {
     scale: 1;
   }
@@ -103,10 +104,10 @@
   color: var(--theme-text-color);
   left: -20px;
   position: absolute;
-  animation: wiggle 0.3s ease-in infinite alternate;  
+  animation: arrow-movement 0.3s ease-in infinite alternate;  
 }
 
-@keyframes wiggle {
+@keyframes arrow-movement {
   from {
     left: -16px;
   }
