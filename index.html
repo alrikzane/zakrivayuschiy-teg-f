@@ -18,14 +18,14 @@
     <header class="header">
       <div class="main-title">
         <a class="decorative-tag">&lt;/html></a> 
-        <h1>закрывающий тег</h1>
+        <h1 class="main-title-header">закрывающий тег</h1>
       </div>         
       <nav class="theme-menu header__theme-menu">
         
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
-            <button type="button" data-theme="dark" class="theme-menu__button">
+            <button type="button" data-theme="dark" class="theme-menu__button button-common">
               Темно
             </button>
           </li>
@@ -34,13 +34,13 @@
               type="button"
               data-theme="auto"
               disabled
-              class="theme-menu__button"
+              class="theme-menu__button button-common"
             >
               Авто
             </button>
           </li>
           <li class="theme-menu__item">
-            <button type="button" data-theme="light" class="theme-menu__button">
+            <button type="button" data-theme="light" class="theme-menu__button button-common">
               Светло
             </button>
           </li>
@@ -50,11 +50,11 @@
     <main class="main">
       <ul class="sprint-deck">
 
-        <li>          
+        <li class="sprint-deck-item">          
           <article class="card">
             <h2 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
             <div class="img-wrapper">
-              <img loading="lazy" class="bright" src="https://images.unsplash.com/photo-1471958680802-1345a694ba6d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Начало пути">
+              <img class="card-image filter-brightness" loading="lazy" src="https://images.unsplash.com/photo-1471958680802-1345a694ba6d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Начало пути">
               <span aria-hidden="true" class="watermark">
                 &lt;zero>
               </span>
@@ -64,7 +64,7 @@
               <p class="plain-text">Я тогда думал, что уже кое что умею и мне будет проще. Как же я заблуждался. </p>
               <div class="like">
                 <button type="button" class="card__icon-button">
-                  <svg class="like-icon" width="30" height="30" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="like-icon" width="30" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g class="heart">
                       <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 
                         18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 
@@ -85,18 +85,18 @@
                     0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--sparks-color)"/>
                   </svg>                
                 </button>              
-                <button type="button" class="card__like-button button">
+                <button type="button" class="card__like-button button button-common">
                   <span class="button__text">Like</span>
                 </button>
               </div>              
             </footer>
           </article>
         </li>
-        <li>          
+        <li class="sprint-deck-item">          
           <article class="card">
             <h2 class="card-title">1 спринт: Я — чистый лист</h2>
             <div class="img-wrapper">
-              <img loading="lazy" class="gray" src="https://plus.unsplash.com/premium_photo-1682337714040-85b0eead8950?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Начало пути">
+              <img class="card-image filter-grayscale" loading="lazy" src="https://plus.unsplash.com/premium_photo-1682337714040-85b0eead8950?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Начало пути">
               <span aria-hidden="true" class="watermark">
                 &lt;blank>
               </span>
@@ -106,7 +106,7 @@
               <p class="plain-text">Как же меня выводили из себя эти неровные отступы между буквами во втором блоке.</p>
               <div class="like">
                 <button type="button" class="card__icon-button">
-                  <svg class="like-icon" width="30" height="30" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="like-icon" width="30" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g class="heart">
                       <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 
                         18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 
@@ -127,18 +127,18 @@
                     0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--sparks-color)"/>
                   </svg>                
                 </button>              
-                <button type="button" class="card__like-button button">
+                <button type="button" class="card__like-button button button-common">
                   <span class="button__text">Like</span>
                 </button>
               </div>              
             </footer>
           </article>
         </li>
-        <li>          
+        <li class="sprint-deck-item">          
           <article class="card">
             <h2 class="card-title">1 спринт: А если не получится?</h2>
             <div class="img-wrapper">
-              <img loading="lazy" class="opacity" src="https://plus.unsplash.com/premium_photo-1667943533727-bb4c10a2480b?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Начало пути">
+              <img class="card-image filter-opacity" loading="lazy" src="https://plus.unsplash.com/premium_photo-1667943533727-bb4c10a2480b?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Начало пути">
               <span aria-hidden="true" class="watermark">
                 &lt;stroke>
               </span>
@@ -148,7 +148,7 @@
               <p class="plain-text">Я научился верстать на флексах и гридах. Это было приятное чувство. </p>
               <div class="like">
                 <button type="button" class="card__icon-button">
-                  <svg class="like-icon" width="30" height="30" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="like-icon" width="30" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g class="heart">
                       <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 
                         18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 
@@ -169,18 +169,18 @@
                     0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--sparks-color)"/>
                   </svg>                
                 </button>              
-                <button type="button" class="card__like-button button">
+                <button type="button" class="card__like-button button button-common">
                   <span class="button__text">Like</span>
                 </button>
               </div>              
             </footer>
           </article>
         </li>
-        <li>          
+        <li class="sprint-deck-item">          
           <article class="card">
             <h2 class="card-title">2 спринт: Погоня за идеалом</h2>
             <div class="img-wrapper">
-              <img loading="lazy" class="contast" src="https://images.unsplash.com/photo-1645416555937-c7e5dfeeef13?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Начало пути">
+              <img class="card-image filter-contrast" loading="lazy" src="https://images.unsplash.com/photo-1645416555937-c7e5dfeeef13?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Начало пути">
               <span aria-hidden="true" class="watermark">
                 &lt;perfecto>
               </span>
@@ -190,7 +190,7 @@
               <p class="plain-text">Неужели все эти штуковины для людей с особенностями и скринридеров мне действительно были так нужны? Ну лучше уж знать об их существовании, чем упустить оффер в будущем. </p>
               <div class="like">
                 <button type="button" class="card__icon-button">
-                  <svg class="like-icon" width="30" height="30" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="like-icon" width="30" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g class="heart">
                       <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 
                         18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 
@@ -211,18 +211,18 @@
                     0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--sparks-color)"/>
                   </svg>                
                 </button>              
-                <button type="button" class="card__like-button button">
+                <button type="button" class="card__like-button button button-common">
                   <span class="button__text">Like</span>
                 </button>
               </div>              
             </footer>
           </article>
         </li>
-        <li>          
+        <li class="sprint-deck-item">          
           <article class="card">
             <h2 class="card-title">2 спринт: О тех, кто рядом</h2>
             <div class="img-wrapper">
-              <img loading="lazy" class="friends" src="https://plus.unsplash.com/premium_photo-1661719880750-4c0de579cd09?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Начало пути">
+              <img class="card-image filter-sepia-contrast" loading="lazy" src="https://plus.unsplash.com/premium_photo-1661719880750-4c0de579cd09?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Начало пути">
               <span aria-hidden="true" class="watermark">
                 &lt;shoulder>
               </span>
@@ -232,7 +232,7 @@
               <p class="plain-text">Наставник как-то во время второго спринта сказал, что это самый сложный спринт по вёрстке. Я тогда сильно обрадовался! Но это не было правдой, по крайней мере для меня. </p>
               <div class="like">
                 <button type="button" class="card__icon-button">
-                  <svg class="like-icon" width="30" height="30" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="like-icon" width="30" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g class="heart">
                       <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 
                         18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 
@@ -253,18 +253,18 @@
                     0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--sparks-color)"/>
                   </svg>                
                 </button>              
-                <button type="button" class="card__like-button button">
+                <button type="button" class="card__like-button button button-common">
                   <span class="button__text">Like</span>
                 </button>
               </div>              
             </footer>
           </article>
         </li>
-        <li>          
+        <li class="sprint-deck-item">          
           <article class="card">
             <h2 class="card-title">3 спринт: Обходные стратегии</h2>
             <div class="img-wrapper">
-              <img loading="lazy" src="https://images.unsplash.com/photo-1467753795868-3a7ed75490db?q=80&w=2085&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Начало пути">
+              <img class="card-image" loading="lazy" src="https://images.unsplash.com/photo-1467753795868-3a7ed75490db?q=80&w=2085&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Начало пути">
               <span aria-hidden="true" class="watermark">
                 &lt;around>
               </span>
@@ -274,7 +274,7 @@
               <p class="plain-text">Этот спринт показался мне самым важным и полезным, без адаптивности в современном мире никуда. </p>
               <div class="like">
                 <button type="button" class="card__icon-button">
-                  <svg class="like-icon" width="30" height="30" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="like-icon" width="30" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g class="heart">
                       <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 
                         18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 
@@ -295,18 +295,18 @@
                     0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--sparks-color)"/>
                   </svg>                
                 </button>              
-                <button type="button" class="card__like-button button">
+                <button type="button" class="card__like-button button button-common">
                   <span class="button__text">Like</span>
                 </button>
               </div>              
             </footer>
           </article>
         </li>
-        <li>          
+        <li class="sprint-deck-item">          
           <article class="card">
             <h2 class="card-title">3 спринт: Когда опускаются руки</h2>
             <div class="img-wrapper">
-              <img loading="lazy" class="blur" src="https://images.unsplash.com/photo-1535890696255-dd5bcd79e6df?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Начало пути">
+              <img class="card-image filter-blur" loading="lazy" src="https://images.unsplash.com/photo-1535890696255-dd5bcd79e6df?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Начало пути">
               <span aria-hidden="true" class="watermark">
                 &lt;despair>
               </span>
@@ -316,7 +316,7 @@
               <p class="plain-text">Да уж, действительно, проблем с этим спринтом возникло не мало. Сколько раз было такое, что вёрстка убежала на несколько пикселей. Вроде не критично, но они накапливаются. </p>
               <div class="like">
                 <button type="button" class="card__icon-button">
-                  <svg class="like-icon" width="30" height="30" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="like-icon" width="30" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g class="heart">
                       <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 
                         18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 
@@ -337,18 +337,18 @@
                     0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--sparks-color)"/>
                   </svg>                
                 </button>              
-                <button type="button" class="card__like-button button">
+                <button type="button" class="card__like-button button button-common">
                   <span class="button__text">Like</span>
                 </button>
               </div>              
             </footer>
           </article>
         </li>
-        <li>          
+        <li class="sprint-deck-item">          
           <article class="card">
             <h2 class="card-title">«Сейчас я здесь»</h2>
             <div class="img-wrapper">
-              <img loading="lazy" class="hope" src="https://images.unsplash.com/photo-1588665343610-04dfd562e2e7?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Начало пути">
+              <img class="card-image filter-contrast-brightness-sepia" loading="lazy" src="https://images.unsplash.com/photo-1588665343610-04dfd562e2e7?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Начало пути">
               <span aria-hidden="true" class="watermark">
                 &lt;hope>
               </span>
@@ -358,7 +358,7 @@
               <p class="plain-text">Я чувствую нетерпение. Жду не дождусь, когда начнутся спринты по программированию. </p>
               <div class="like">
                 <button type="button" class="card__icon-button">
-                  <svg class="like-icon" width="30" height="30" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="like-icon" width="30" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g class="heart">
                       <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 
                         18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 
@@ -379,7 +379,7 @@
                     0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--sparks-color)"/>
                   </svg>                
                 </button>              
-                <button type="button" class="card__like-button button">
+                <button type="button" class="card__like-button button button-common">
                   <span class="button__text">Like</span>
                 </button>
               </div>              
@@ -393,7 +393,7 @@
         type="button"
         onclick="window['dialog'].showModal();" 
         aria-controls="dialog"      
-        class="button save-button">
+        class="button save-button button-common">
         <svg class="save-button-icon" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 39 39" >
           <use href="/svg/floppy.svg#save-icon"></use>
@@ -402,7 +402,7 @@
       </button>
     </main>
 
-    <dialog id="dialog">
+    <dialog id="dialog" class="dialog">
       <div class="dialog-content">
         <svg class="dialog-icon" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 39 39" >
@@ -411,7 +411,7 @@
         <p>Вставьте дискету,чтобы продолжить</p>
       </div>
       <form method="dialog">
-        <button type="submit" class="button dialog-button">
+        <button type="submit" class="button dialog-button button-common">
           <span class="button__text">ок</span>
         </button>
       </form>

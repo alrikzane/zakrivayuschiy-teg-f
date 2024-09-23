@@ -28,5 +28,8 @@
   --sparks-color: red;
   --main-heart-color: none;
 
+  --decorative-font: Press-Start-2P, sans-serif;
+  --decorative-font-weight: 400;
+  --main-font: "Inter", sans-serif;
 
 }

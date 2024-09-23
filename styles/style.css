@@ -15,8 +15,9 @@
 */
 
 .page {
-  font-family: var(--main-font);
-  color: var(--theme-text-color);
+  font-family: var(--main-font, sans-serif);
+  font-variation-settings: "wght" 400;
+  color: var(--theme-text-color, #00CC14);
   min-inline-size: 320px;
   min-block-size: 100dvb;
   background-color: var(--background-gradient-cover);
@@ -26,10 +27,11 @@
 }
 
 .header {
-  max-inline-size: 700px;
+  max-inline-size: 696px;
+  max-block-size: 364px;
   margin: auto;
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 245px 1fr;
   margin-top: 102px;
   margin-bottom: 100px;
   background-color: var(--theme-background-color);
@@ -44,19 +46,19 @@
 }
 
 .decorative-tag{
-  font-family: Press-Start-2P, sans-serif;
+  font-family: var(--decorative-font), sans-serif;
   font-size: clamp(3.063rem, 1.909rem + 4.923vi, 4.063rem);
-  font-weight: 400;
+  font-weight: var(--decorative-font-weight);
   line-height: 65px;
   text-transform: uppercase;
 }
 
-.main-title h1 {
+.main-title-header {
   align-self: center;
   text-transform: uppercase;
-  font-family: Press-Start-2P;
+  font-family: var(--decorative-font), sans-serif;
   font-size: clamp(0.875rem, 0.226rem + 2.769vi, 1.438rem);
-  font-weight: 400;
+  font-weight: var(--decorative-font-weight);
   margin-top: 20px;
 }
 
@@ -67,6 +69,7 @@
 
 .theme-menu__list {
   justify-self: center;
+  align-self: end;
   margin: 25px 0;
   display: flex;
   gap: 7px;
@@ -74,16 +77,19 @@
   align-items: start;
 }
 
-.theme-menu__button {
-  margin-left: 6px;
-  font-family: Press-Start-2P;
+.button-common {
+  font-family: var(--decorative-font), sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: var(--decorative-font-weight);
+  border: 2px solid var(--border-color);
+  position: relative;
+}
+
+.theme-menu__button {
+  margin-left: 16px;  
   text-transform: uppercase;
   border: none;
-  position: relative;
-  transition: opacity 0.3s ease;
-  cursor: pointer;
+  transition: opacity 0.3s ease;  
 }
 
 .theme-menu__button:disabled, .theme-menu__button:hover {
@@ -107,7 +113,7 @@
   background-color: var(--theme-background-color);
 }
 
-.sprint-deck li {
+.sprint-deck-item {
   margin-top: 50px;
 }
 
@@ -119,10 +125,8 @@
 
 .card-title {  
   font-size: 18px;
-  font-weight: 785;
+  font-variation-settings: 'wght' 785;
   line-height: 21.78px;
-  text-align: left;
-  font-variation-settings: 'slnt' 0;
   padding: 5px 0 5px 10px;
 }
 
@@ -130,30 +134,34 @@
   position: relative;
 }
 
-img {  
+.card-image {  
   display: block;
   max-block-size: 100%;
   inline-size: 100%;
   object-fit: cover;
+  object-position: center;
   border-top: 2px solid var(--border-color);
   border-bottom: 2px solid var(--border-color);
   z-index: 0;
+  aspect-ratio: 1/1.01;
 }
 
 .watermark{
+  letter-spacing: -2px;
   position: absolute;
   top: var(--gap);
   right: var(--gap);
   z-index: 1;
   color: var(--theme-text-color);
-  opacity: 70%;
-  font-family: Press-Start-2P, sans-serif;
+  opacity: 50%;
+  font-family: var(--decorative-font), sans-serif;
   text-shadow: 
     -1px -1px 1px var(--watermark-shadow), 
     1px 1px 1px var(--watermark-shadow),
     -1px 1px 1px var(--watermark-shadow), 
     1px -1px 1px var(--watermark-shadow);
   mix-blend-mode: hard-light;
+  text-transform: uppercase;
 }
 
 @supports((stroke: 1px var(--watermark-shadow)) or (-webkit-text-stroke: 1px var(--watermark-shadow))) {
@@ -165,9 +173,8 @@ img {
 }
 
 .plain-text{
-  font-family: Inter;
   font-size: 18px;
-  font-weight: 465;
+  font-variation-settings: "wght" 465;
   line-height: 21px;
   font-variation-settings: 'slnt' 0;
 }
@@ -185,12 +192,16 @@ img {
 }
 
 .card__like-button {
-  inline-size: 135px;
+  inline-size: 130px;
   block-size: 38px;
 }
 
 .like-icon {
   color: var(--theme-text-color);
+  inline-size: 45px;
+  block-size: 31px;
+  padding-right: -2px;
+  cursor: pointer;
 }
 
 .sparks {
@@ -213,8 +224,7 @@ img {
 
 .button {
   transition: box-shadow 0.3s ease;
-  position: relative;
-  border: 2px solid var(--border-color);
+  line-height: 0.9;
 }
 
 .button:focus {
@@ -226,10 +236,9 @@ img {
 }
 
 .button__text {
-  font-family: Press-Start-2P;
+  font-family: var(--decorative-font), sans-serif;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 0.9;
+  font-weight: var(--decorative-font-weight);  
 }
 
 .button__text, .save-button-icon {
@@ -247,7 +256,6 @@ img {
   min-inline-size: 345px;
   min-block-size: 55px;  
   flex-wrap: nowrap;
-  border: 2px solid var(--border-color);
 }
 
 .save-button-icon {
@@ -260,15 +268,15 @@ img {
   backdrop-filter: blur(7px);
 }
 
-#dialog {
+.dialog {
   max-inline-size: 353px;
   border: 2px solid var(--border-color);
   color: var(--theme-text-color);
   padding: 25px 30px;
-  font-family: Press-Start-2P;
+  font-family: var(--decorative-font), sans-serif;
   font-size: 14px;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: var(--decorative-font-weight);
   line-height: 1.5;
   background-color: var(--theme-background-color);
 }
@@ -282,25 +290,29 @@ img {
   block-size: 39px;
   inline-size: 39px;
   flex-shrink: 0;
+  align-self: center;
 }
 
 .dialog-button {  
   inline-size: 100%;
-  font-family: Press-Start-2P;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 0.9;
   text-transform: uppercase;
   margin-top: 30px;
-  margin-bottom: 30px;
-  block-size: 38px;
 }
 
 
 @media (width <= 375px) {
   .header {
-    max-block-size: 323px;
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: 205px 1fr;
+  }
+
+  .decorative-tag {
+    line-height: 0.96;
+  }
+
+  .theme-menu__list {
+    margin-top: 20px;
+    gap: 8px;
+    margin-bottom: 20px;
   }
 
   .save-button {
@@ -315,30 +327,30 @@ img {
   }
 }
 
-.bright {
+.filter-brightness {
   filter: brightness(200%);
 }
 
-.contrast {
+.filter-contrast {
   filter: contrast(150%);
 }
 
-.blur {
+.filter-blur {
   filter: blur(5px);
 }
 
-.opacity {
+.filter-opacity {
   filter: opacity(50%);
 }
 
-.gray {
+.filter-grayscale {
   filter: grayscale(0.9);
 }
 
-.friends {
+.filter-sepia-contrast {
   filter: sepia(80%) contrast(130%);
 }
 
-.hope {
+.filter-contrast-brightness-sepia {
   filter: contrast(140%) brightness(120%) sepia(50%);
 }
