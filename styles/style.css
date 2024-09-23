@@ -109,12 +109,9 @@
   margin: auto;  
 }
 
-.sprint-deck {
-  background-color: var(--theme-background-color);
-}
-
 .sprint-deck-item {
   margin-top: 50px;
+  background-color: var(--theme-background-color);  
 }
 
 .card {
