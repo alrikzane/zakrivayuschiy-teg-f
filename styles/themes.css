@@ -63,8 +63,8 @@
   --button-text-color: #000;
   
   --page-background-gradient:
-  repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 2px 4px), 
-  repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px), 
+  repeating-linear-gradient(to left, var(--background-gradient-cover) 0 2px, transparent 2px 4px), 
+  repeating-linear-gradient(to bottom, var(--background-gradient-cover) 0 2px, transparent 2px 4px), 
   linear-gradient(to bottom, var(--background-gradient-smooth-start) 0%, var(--background-gradient-smooth-start) 0.01%, var(--background-gradient-smooth-end) 100%);
   }
 }
