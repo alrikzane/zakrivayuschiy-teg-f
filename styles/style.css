@@ -291,6 +291,7 @@
 
 .dialog-button {  
   inline-size: 100%;
+  min-block-size: 38px;
   text-transform: uppercase;
   margin-top: 30px;
 }
