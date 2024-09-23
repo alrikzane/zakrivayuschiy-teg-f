@@ -12,7 +12,7 @@
     var(--background-gradient-color) 2px 4px), 
   repeating-linear-gradient(to bottom, transparent 0 2px,
     var(--background-gradient-color) 2px 4px),
-  linear-gradient(to bottom, var(--background-gradient-smooth-start) 0.01%, var(--background-gradient-smooth-end));
+    linear-gradient(to bottom, var(--background-gradient-smooth-start) 0%, var(--background-gradient-smooth-start) 0.01%, var(--background-gradient-smooth-end) 100%);
   
   
   --theme-text-color: #00CC14;
