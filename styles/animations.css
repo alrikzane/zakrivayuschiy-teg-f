@@ -17,12 +17,17 @@
 
 .like-icon .core {
   fill: var(--theme-background-color);
-  transition: fill 0.3s linear;
+  transition: fill 0.3s linear 0.03s;
 }
 
 .like-icon .main-heart {
   fill: var(--theme-background-color);
   transition: fill 0.3s linear;
+}
+
+.like-icon .contour {
+  fill: var(--theme-text-color);
+  transition: fill 0.1s linear;
 }
 
 /* heart fill on hover */
@@ -69,13 +74,10 @@
 /* spark explosion*/
 
 .like-icon.is-liked .sparks {
-  animation: sparks 0.3s ease-in 0.1s 1 alternate;
+  animation: sparks 0.3s ease-in 0.3s alternate;
 }
 
 @keyframes sparks {
-  from {
-    opacity: 0;
-  }
   to {
     opacity: 1;
   }
@@ -89,11 +91,8 @@
 }
 
 @keyframes heart-expand {
-  from {
-    scale: 1;
-  }
   to {
-    scale: 1.5;
+    scale: 1.2;
   }
 }
 
@@ -104,7 +103,7 @@
   color: var(--theme-text-color);
   left: -20px;
   position: absolute;
-  animation: arrow-movement 0.3s ease-in infinite alternate;  
+  animation: arrow-movement 0.5s ease infinite alternate;  
 }
 
 @keyframes arrow-movement {

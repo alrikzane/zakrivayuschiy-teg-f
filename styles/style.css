@@ -16,7 +16,7 @@
 
 .page {
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: "wght" 400;
+  font-variation-settings: var(--main-font-normal-weight, 'wght' 400);
   color: var(--theme-text-color, #00CC14);
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -121,7 +121,7 @@
 
 .card-title {  
   font-size: 18px;
-  font-variation-settings: 'wght' 785;
+  font-variation-settings: var(--main-font-bold-weight, 'wght' 785);
   line-height: 21.78px;
   padding: 5px 0 5px 10px;
 }
@@ -138,7 +138,6 @@
   object-position: center;
   border-top: 2px solid var(--border-color);
   border-bottom: 2px solid var(--border-color);
-  z-index: 0;
   aspect-ratio: 1/1.01;
 }
 
@@ -147,7 +146,6 @@
   position: absolute;
   top: var(--gap);
   right: var(--gap);
-  z-index: 1;
   color: var(--theme-text-color);
   opacity: 50%;
   font-family: var(--decorative-font), sans-serif;
@@ -164,15 +162,14 @@
   .watermark {
       -webkit-text-stroke: 1px var(--watermark-shadow);
       stroke: 1px var(--watermark-shadow);
-      text-shadow: none;
+      text-shadow: none;      
   }
 }
 
 .plain-text{
   font-size: 18px;
-  font-variation-settings: "wght" 465;
+  font-variation-settings: var(--main-font-paragraph-weight, "wght" 465);
   line-height: 21px;
-  font-variation-settings: 'slnt' 0;
 }
 
 .card-footer {
@@ -261,14 +258,16 @@
 
 #dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
-  backdrop-filter: blur(7px);
 }
 
 .dialog {
-  max-inline-size: 353px;
+  min-block-size: 191px;
+  flex-direction: column;
+  align-items: center;
+  inline-size: clamp(21.313rem, 20.447rem + 3.692vi, 22.063rem);
+  padding: 25px 28px;
   border: 2px solid var(--border-color);
   color: var(--theme-text-color);
-  padding: 25px 30px;
   font-family: var(--decorative-font), sans-serif;
   font-size: 14px;
   text-transform: uppercase;
@@ -277,9 +276,18 @@
   background-color: var(--theme-background-color);
 }
 
+.dialog[open] {
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+}
+
 .dialog-content {
   display: flex;
   gap: 20px;
+  inline-size: clamp(16.063rem, 13.466rem + 11.077vi, 18.313rem);
+  justify-self: center;
+  margin: auto;
 }
 
 .dialog-icon {
@@ -289,11 +297,15 @@
   align-self: center;
 }
 
-.dialog-button {  
+.dialog-form {
+  inline-size: clamp(16.063rem, 13.466rem + 11.077vi, 18.313rem);
+}
+
+.dialog-button {
   inline-size: 100%;
   min-block-size: 38px;
   text-transform: uppercase;
-  margin-top: 30px;
+  padding: 0;  
 }
 
 
@@ -310,6 +322,10 @@
     margin-top: 20px;
     gap: 8px;
     margin-bottom: 20px;
+  }
+
+  .watermark {
+    right: 11px;
   }
 
   .save-button {
